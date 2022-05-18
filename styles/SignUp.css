@@ -1,0 +1,107 @@
+body {
+  margin:0px;
+  font-family:"Open Sans",sans-serif;
+  background:#ddd;
+}
+.overlay-form {
+  position:absolute;
+  top:50vh;
+  left:0px;
+  width:100vw;
+  height:0vh;
+  background:rgba(0,0,0,0.8);
+  z-index:-1;
+  opacity:0;
+  padding:80px 100px;
+  overflow:hidden;
+  box-sizing:border-box;
+  transition: top 500ms ease-in-out,
+              opacity 500ms ease-in-out,
+              height 0ms ease-in-out 500ms;  
+}
+.overlay-form .close-btn {
+  position:absolute;
+  top:20px;
+  right:40px;
+  color:#fff;
+  font-size:40px;
+  font-weight:600;
+  cursor:pointer;
+}
+.overlay-form h1 {    /*Create a new account*/
+  font-size:24px;
+  padding: 0px;
+  margin: 10px;
+  border: 0px;
+  color:white;
+  opacity: 0.5;
+  background: none;
+  float: left;
+  transform: translate(-415px,0px);
+  display: inline-block;
+ 
+
+}
+.overlay-form p {  /*Join our community. Lets set up your element */
+  font-size:16px;
+  color:#eee;
+  margin:-15px 0px 30px;
+  display: inline-block;
+}
+.overlay-form .form-element {
+  margin:20px 0px;
+}
+.overlay-form label {
+  display:block;
+  font-size:17px;
+  color:#eee;
+  margin-bottom:5px;
+}
+.overlay-form input {       /* Design of the input bar*/
+  width:100%;
+  padding:6px;
+  font-size:17px;
+  color: white;
+  border:2px solid #eee;
+  background:transparent;
+  outline:none;
+  border-radius:10px;
+}
+.overlay-form button, /* Overlay form's Sign Up button design */
+.center button {
+  margin-top:10px;
+  width:100px;
+  height:35px;
+  font-size:15px;
+  background: grey;
+  color:white;
+  border:none;
+  outline:none;
+  border-radius:10px;
+}
+
+
+
+.center {                 /* Sign Up button position  */
+  position:absolute;
+  top:73%;
+  left:30%;
+  transform:translate(-40%,-200%);
+}
+.center button {      /* Sign Up button design */
+  width:150px;
+  height:40px;
+  font-weight:600;
+  box-shadow:3px 3px 2px 1px rgba(0,0,0,0.1);
+  cursor:pointer;
+}
+
+body.activeForm .overlay-form {
+  z-index:2;
+  opacity:1;
+  top:0px;
+  height:100vh;
+  transition: top 500ms ease-in-out,
+              opacity 500ms ease-in-out,
+              height 0ms ease-in-out 0ms;
+}

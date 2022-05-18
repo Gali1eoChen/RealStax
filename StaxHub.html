@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Stax Hub</title>
+  <!-- For the roboto font-->
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family: "Arial", sans-serif;
+  vertical-align: top;
+}
+  /*-------------------Nav bar-------------*/
+  .navbar {
+  font-family: 'Arial';
+  font-weight: none;
+  width: 100%;
+  background-color: white;
+  overflow: auto;
+  padding:  5 px;
+  text-align: center;
+
+}
+
+.navbar a:hover {
+  color: rgb(40, 151, 188);
+}
+
+/* Here is the top bar Design */
+.SignInButton {
+  float: right;
+  background-color: rgb(40, 151, 188);
+  border-radius: 25px;
+  padding: 15px;
+  border:  0px;
+  font-size: 17px;
+  color : white; 
+  text-align: center; 
+  font-family: Arial;
+  cursor: pointer; /* It is about what would u mouse look like when u point at it */
+}
+
+.SignInButton:hover {
+  background-color: rgb(113, 195, 222);
+}
+
+.buttonb {
+  float: right;
+  background-color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  padding: 15px;
+  border:  0px;
+  font-size: 17px;
+  color : Black; 
+  text-align: center;
+  font-family: Arial;
+  cursor: pointer; 
+  float:  center;
+  overflow: hide;
+}
+
+
+
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+    padding-top: 1px;
+  }
+}
+
+.navbar .searchbar {
+  float: right;
+  
+}
+
+.navbar input[type=text] {
+  padding: 8px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  background-color: lightgray;
+
+}
+
+.navbar .searchbar button {
+  float: right;
+  padding: 8px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar .searchbar button:hover {
+  background: #ccc;
+}
+
+
+ /* Below are for the side bar */
+
+.sidenav {
+  height: 100%;
+  width: 170px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #1d1d1f;
+  overflow-x: hidden;
+  padding-top: 50px;
+}
+
+.sidenav a {
+  padding: 15px 8px 15px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.Icon {
+  float:top;
+  width: 68px;
+  height: 70px;
+  cursor: pointer;
+  padding-left:  35px;
+}
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+/*-Middle Bar--*/
+.secondTopBar { 
+  
+  font-family: "Verdana",sans-serif;
+  font-weight: none;
+  width: 100%;
+  float: right;
+  background-color: black;
+  overflow: auto; 
+  transform:  translate(0px 500px);
+ }
+.secondTopBar a {
+  color: white;
+  float:  right;
+  font-family: "Montserrat", sans-serif ;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 20px;
+}
+.titleInPage{
+  float: right;
+  width: 85%;
+  text-align: center;
+  color:  black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  padding: 20px;
+  margin-top: 15px;
+  overflow: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-45%, -50%);
+  opacity: 1;
+}
+.container{
+  position: relative;
+  text-align: center;
+  background-position: center;
+  width: 95%;
+  height: 300px;
+  margin: none;
+  
+  border:  none;
+  padding:  none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  float: right;
+  z-index: -1;
+}
+.centrePicture{
+  position: relative;
+  text-align: center;
+  background-position: center;
+  width: 95%;
+  height: 600px;
+  margin: none;
+  
+  border:  none;
+  padding:  none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  float: right;
+  z-index: -1;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  padding: 8px;
+}
+.column {
+  float: right;
+  width: 33.33%;
+  padding: 5px;
+}
+.smallcolumn
+{
+  float: right;
+  width: 20%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.SubscribeButton
+{
+ background-color: rgb(40, 151, 188); 
+ position:absolute; 
+ font-size: 15px ;
+ border-radius: 9px; 
+ height: 40px; 
+ color: white; 
+ float:  right;
+ text-align: center; 
+ border: 0px; 
+ width:10%;
+ cursor: pointer;
+ transform: translate(5px , 2px);
+}
+.SubscribeButton:hover {
+  background-color: rgb(113, 195, 222);
+
+}
+
+
+</style>
+
+</head>
+<body>
+  
+
+  <!--Top Bar-->
+<div class="navbar">
+  
+  <div>
+  <a href="html"><button onclick="signInPopUp()" class="SignInButton">Sign In</button> </a> 
+  </div>
+
+ <script>
+  function signInPopUp() {
+    let text = "Hello! Welcome to Stax, ";
+    let unfilled = true;
+    do{
+
+      let userId = window.prompt("Please enter your UserID:", "");
+      text += userId;
+
+      if (userId != null || userId != "") {
+        unfilled = false;
+      } 
+      
+
+    } while(unfilled == true);
+    unfilled = true;
+
+    do{
+      let password = window.prompt("Please enter your password:", "password");
+      if (password != null || password != "") {
+          unfilled = false;
+        } 
+    }while(unfilled == true);
+     window.alert(text);
+     return userId;
+    }
+</script>
+
+
+ <!--Top Bar Other buttons -->
+
+  <a class="buttonb" href="#"> Contact</a> 
+  <a class="buttonb" href="Stax.html"> Home</a>
+  <a class="buttonb" href="#" onclick ="window.alert('In development')"> <img src="images/cart.png" width = "24px" height = "24px"></a> 
+
+
+  <!--Search Bar-->
+   <div class="searchbar">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><img src="images/Louge.png" width = "17px" height = "17px"></button>
+    </form>
+  </div>
+  <!-------------------------------------------------->
+
+  <!--Go to Google button-->
+  <div>
+  <a class = "buttonb" href = "https://www.google.com/?client=safari"> <img src= "images/google logo.png" width = "21px" height = "21px" > </a>
+  </div>
+  <!-------------------------------------------------->
+
+
+</div>
+
+
+<div class = "secondTopBar"> 
+  <a href="">Mathematics/Therotical Physics</a>
+  <a href="">Cybersecurity</a>
+  <a href="">Web Development</a>
+  <a href="">Mathematics</a>
+  <a href="">Data Science</a>
+  <a href="">Machine Learning</a>
+
+</div>
+
+<div class = "container">
+  <img src="images/ModernCode.jpeg" alt="Code" style="width:100%; height :900px; opacity: 0.4;">
+  <div class = "titleInPage">
+    <h1 style="font-family: sans-serif;">Welcome to StaxHub</h1> 
+    <h2 style="font-weight: bold;">We Learn</h2>
+    <h3 style="font-size: 20px; color: grey">With the world's largest developer site.</h3> 
+  </div>
+</div>
+
+<div class = "container">
+  <div class = "titleInPage">
+    <h2 style="font-family: 'Roboto', sans-serif; font-size: 35px; font-weight: bold; text-align: center;">It’s more than a forum. It’s a way of working together.</h2>
+    <p style="font-family: 'Roboto', sans-serif; font-size: 20px ;text-align: center;">Start with a board, lists, and cards. Customize and expand with more features as our community grows. Manage topics, organize resources, and build developers' bonding—all in one place.</h2>
+    </p>
+  </div>
+
+</div>
+
+<div class ="centrePicture"> 
+  <img src = "images/ChatInterface.png"alt="Code" style=" transform: translate(30px,-10px); width:60%; ">
+</div>
+
+<div class = "row"> 
+  <div class = "column" style="transform: translate(-60px,0px)"> <img src="images/Automation.png" alt="Code" style="width:80%; height :80%;" > </div>
+  <div class = "column" style="transform: translate(-60px,0px)">
+    <h3 style="font-family: 'Roboto', sans-serif; font-size: 35px; font-weight: bold; text-align: left; ">AI Automation</h3>
+    <p style="font-family: 'Roboto', sans-serif; font-size: 20px ;text-align: left;"> Put down your hands, let the AI works. This helps you simply focus on work that matters. With built-in automation, Butler, reduce the number of tedious tasks (and clicks) on your project board by harnessing the power of automation across you and your team.</p>
+  </div>
+</div>
+
+<div class = "row"> 
+  <div class = "column" style="transform: translate(-60px,0px)">
+    <h3 style="font-family: 'Roboto', sans-serif; font-size: 35px; font-weight: bold; text-align: left; ">Latest Tech News</h3>
+    <p style="font-family: 'Roboto', sans-serif; font-size: 20px ;text-align: left;">We believe you can create a better future when you understand new ideas. Our experts give you news, tools and advice that help you navigate our ever-changing world. Because when you understand what’s going on, you can do something about it.</p>
+  </div>
+  <div class = "column" style="transform: translate(-60px,0px)"> <img src="images/TechProduct.jpg" alt="Code" style="width:80%; height :80%; border-radius: 8px;" > </div>
+</div>
+
+
+  
+
+<div class = "container" style ="height: 200px">
+   <div class = "titleInPage">
+    <h2 style="font-family: 'Roboto', sans-serif; font-size: 35px; font-weight: bold; text-align: center; ">Why StaxHub?</h2>
+  </div>
+ </div>
+
+
+ <div class = "row">
+    <div class = "smallcolumn" style="transform: translate(-80px,0px)">
+      <h3 style="font-family: 'Roboto', sans-serif; font-size: 28px; font-weight: bold; text-align: left;">Learn By Doing</h3>
+      <p style="font-family: 'Roboto', sans-serif; font-size: 15px ;text-align: left;">Write more to learn more. We provide abundant implemented examples that will help you run and edit code on your own.</p>
+    </div>
+    
+    <div class = "smallcolumn" style="transform: translate(130px,30px)">
+      <img src="images/code.png" alt = "Code" style = " display:flex;width:20%; height :20%;">
+    </div>
+
+    <!-- -->
+    <div class = "smallcolumn" style="transform: translate(130px,0px)">
+      <h3 style="font-family: 'Roboto', sans-serif; font-size: 28px; font-weight: bold; text-align: left;">Content that you can Trust</h3>
+      <p style="font-family: 'Roboto', sans-serif; font-size: 15px ;text-align: left;">Our experts regularly examine and ensure all resources are accurate and trustworthy.</p>
+    </div>
+
+     <div class = "smallcolumn" style="transform: translate(350px,30px)">
+      <img src="images/TrustContent.png" alt = "Code" style = " width:20%; height :20%;">
+    </div>
+    <!-- -->
+
+     <div class = "smallcolumn" style="transform: translate(350px,0px)">
+      <h3 style="font-family: 'Roboto', sans-serif; font-size: 28px; font-weight: bold; text-align: left;">Global scale, personalized support</h3>
+      <p style="font-family: 'Roboto', sans-serif; font-size: 15px ;text-align: left;">Our world-wide community with more than 30 millions of developers produces a large flow of ideas, solutions and discussions. </p>
+    </div>
+
+    <div class = "smallcolumn" style="transform: translate(-870px,-240px);">
+      <img src="images/community.png" alt = "Code" style = "width:20%; height :20%;">
+    </div>
+
+  </div>
+
+  <div class = "container" style="height :400px;"">
+    <img src="images/Subscription.jpeg" alt="Code" style="width:100%;  opacity: 0.8;">
+    <div class = "titleInPage">
+      <h2 style="font-family: 'Roboto', sans-serif; color:  white;font-size: 35px; font-weight: bold; text-align: left">Subscribe Us with your email</h2> 
+
+      <input  placeholder="Email Address..." style=" padding: 6px; font-size:13px ;border: none; border-radius: 9px; height: 30px; width:40%;" type="text" id="userInput" />
+
+      <button class ="SubscribeButton"  type="submit" onclick="displayEmail();" >Submit </button>
+       <div id="result" ></div>
+  </div>
+
+ 
+
+  <script>
+    function displayEmail() {
+        var input =  document.getElementById("userInput").value;
+         document.getElementById("result").innerHTML = input;
+    }
+</script>
+</div>
+
+ 
+
+
+
+
+ <!--Side Bar-->
+<div class="sidenav">
+  <a href ="Stax.html"><img class = "Icon" src="images/preparation.png" ></a>
+  <a href ="StaxHub.html">STAX Hub</a>
+  <a href="About.html">About</a>
+  <a href="Portal.html">Services Portal</a>
+  <a href="#Contact">Contact</a>
+  <a href="#Support">Support</a>
+</div> 
+
+
+
+
+	
+
+</body>
+</html>
