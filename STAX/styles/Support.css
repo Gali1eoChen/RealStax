@@ -1,0 +1,252 @@
+body {
+    font-family: "Arial", sans-serif;
+    vertical-align: top;
+  }
+    /*-------------------Nav bar-------------*/
+    .navbar {
+    font-family: 'Arial';
+    font-weight: none;
+    width: 100%;
+    background-color: white;
+    overflow: auto;
+    padding:  5 px;
+    text-align: center;
+  
+  }
+  
+  .navbar a:hover {
+    color: rgb(40, 151, 188);
+  }
+  
+  /* Here is the top bar Design */
+  .SignInButton {
+    float: right;
+    background-color: rgb(40, 151, 188);
+    border-radius: 25px;
+    padding: 15px;
+    border:  0px;
+    font-size: 17px;
+    color : white; 
+    text-align: center; 
+    font-family: Arial;
+    cursor: pointer; /* It is about what would u mouse look like when u point at it */
+  }
+  
+  .SignInButton:hover {
+    background-color: rgb(113, 195, 222);
+  }
+  
+  .buttonb {
+    float: right;
+    background-color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    padding: 15px;
+    border:  0px;
+    font-size: 17px;
+    color : Black; 
+    text-align: center;
+    font-family: Arial;
+    cursor: pointer; 
+    float:  center;
+    overflow: hide;
+  }
+  
+  
+  
+  
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+      padding-top: 1px;
+    }
+  }
+  
+  .navbar .searchbar {
+    float: right;
+    
+  }
+  
+  .navbar input[type=text] {
+    padding: 8px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    background-color: lightgray;
+  
+  }
+  
+  .navbar .searchbar button {
+    float: right;
+    padding: 8px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .navbar .searchbar button:hover {
+    background: #ccc;
+  }
+  
+  
+   /* Below are for the side bar */
+  
+  .sidenav {
+    height: 100%;
+    width: 170px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #1d1d1f;
+    overflow-x: hidden;
+    padding-top: 50px;
+  }
+  
+  .sidenav a {
+    padding: 15px 8px 15px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .Icon {
+    float:top;
+    width: 68px;
+    height: 70px;
+    cursor: pointer;
+    padding-left:  35px;
+  }
+  .main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  
+  
+  /*-Middle Bar--*/
+  .secondTopBar { 
+    
+    font-family: "Verdana",sans-serif;
+    font-weight: none;
+    width: 100%;
+    float: right;
+    background-color: black;
+    overflow: auto; 
+    transform:  translate(0px 500px);
+   }
+  .secondTopBar a {
+    color: white;
+    float:  right;
+    font-family: "Montserrat", sans-serif ;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 20px;
+  }
+  .titleInPage{
+    /* float: right; */
+    width: 85%;
+    text-align: center;
+    color:  black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    padding: 20px;
+    margin-top: 15px;
+    overflow: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -50%);
+    opacity: 1;
+  }
+  .container{
+    position: relative;
+    text-align: center;
+    background-position: center;
+    width: 95%;
+    height: 300px;
+    margin: none;
+    
+    border:  none;
+    padding:  none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    float: right;
+    z-index: -1;
+  }
+  
+  /*  ------------------------------------------------------Below is for the chatbot ------------------------------------------------------*/
+  .inputBox{
+  border-radius: 10px;
+  border: 40px;
+  border-color: black;
+  width: 900px;
+  height: 100px;
+  margin: 50px auto;
+  text-align: left;
+  }
+  
+  .box {
+      width: 500px;
+      margin: 50px auto;
+      background: #00bfb6;
+      padding: 20px;
+      text-align: center;
+      font-weight: 900;
+      color: #fff;
+      font-family: arial;
+      position:relative;
+      border-radius : 10px;
+  }
+  .sb1:before {
+      content: "";
+      width: 0px;
+      height: 0px;
+      position: absolute;
+      border-left: 10px solid #00bfb6;
+      border-right: 10px solid transparent;
+      border-top: 10px solid #00bfb6;
+      border-bottom: 10px solid transparent;
+      right: -20px;
+      top: 6px;
+   }
+  
+   /*  --------------------------------------------------------------------------------------------------------------------------------*/                  
+  
+  
+  .SubscribeButton
+  {
+   background-color: rgb(40, 151, 188); 
+   position:absolute; 
+   font-size: 15px ;
+   border-radius: 9px; 
+   height: 40px; 
+   color: white; 
+   float:  right;
+   text-align: center; 
+   border: 0px; 
+   width:10%;
+   cursor: pointer;
+   transform: translate(5px , 2px);
+  }
+  .SubscribeButton:hover {
+    background-color: rgb(113, 195, 222);
+  
+  }
+  
+  

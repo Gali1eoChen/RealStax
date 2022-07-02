@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<!--For the Overall in CSS-->
+<link rel="stylesheet" type ="text/css" href="styles/Stax.css">
+    <head>
+    <style> 
+
+        .inputBox{
+        border-radius: 10px;
+        border: 40px;
+        border-color: black;
+        width: 900px;
+        height: 200px;
+        margin: 50px auto;
+        }
+
+        .box {
+            width: 500px;
+            margin: 50px auto;
+            background: #00bfb6;
+            padding: 20px;
+            text-align: center;
+            font-weight: 900;
+            color: #fff;
+            font-family: arial;
+            position:relative;
+            border-radius : 10px;
+        }
+        .sb1:before {
+            content: "";
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            border-left: 10px solid #00bfb6;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #00bfb6;
+            border-bottom: 10px solid transparent;
+            right: -20px;
+            top: 6px;
+         }
+        
+                            
+
+    </style>
+    </head>
+    
+    <body>
+        <div class = "chatbot"> 
+        <h1>Consultation with STAX.AI</h1>
+
+        <form action="/action_page.php" id="usrform">
+
+        </form>
+        <br>
+
+
+        <textarea class= "inputBox" id="userInput1" rows="4" cols="60" name="comment"  form="usrform">Enter text here. </textarea>
+
+
+        <input type="submit" onclick = "reply()" >
+
+        <script>
+
+            function getRandomInt(min, max) {
+                     return Math.floor(Math.random() *10) % max
+            }
+            function reply(){
+                    var input1 = document.getElementById('userInput1').value ;
+                    const triggerArray = [
+                    //1 
+                    ["hello", "hi"],
+                    //2
+                    ["bored","boring"],
+                    //3
+                    ["where are you" , "where r u","where are u","where r you"]
+                    ] ;
+                    const replyArray = [
+                    //1 
+                    ["Hello, how you doing bobui?", "Yo whatssuppp"],
+                    //2
+                    ["Do you need to find you now? ","Why don't just give me a call now?"],
+                    //3
+                    ["Call me and you will know", "call me and ask!!", "I am at your heart lor!" ]
+                    ] ;
+
+
+                    function compare(triggerArray, replyArray, text) {
+                    let item;
+                        for (let x = 0; x < triggerArray.length; x++) {
+                            for (let y = 0; y < replyArray.length; y++) {
+                                if (text.toLowerCase().includes(triggerArray[x][y])) {
+                                        items = replyArray[x];
+                                        item = items[getRandomInt(0, items.length)];
+                            }
+                    }
+                    }
+                    return item;
+                    }
+ 
+  document.getElementById('ans').innerHTML = compare(triggerArray, replyArray, input1);
+}
+
+</script>
+
+<div class="box sb1"><p id= "ans"></p></div>
+</div>
+
+    </body>
+
+
+</html>

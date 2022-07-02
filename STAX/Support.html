@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>STAX.AI</title>
+  <!-- For the roboto font-->
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" type ="text/css" href="styles/Support.css">
+
+<!--For the Overall in JavaScript (Exactly same as index.html's)-->
+<script type="text/javascript" src="displayClient.js"></script>
+
+
+
+</head>
+<body>
+  
+
+  <!--Top Bar-->
+<div class="navbar">
+  
+  <div>
+  <a href="html"><button onclick="signInPopUp()" class="SignInButton">Sign In</button> </a> 
+  </div>
+
+ <script>
+  function signInPopUp() {
+    let text = "Hello! Welcome to Stax, ";
+    let unfilled = true;
+    do{
+
+      let userId = window.prompt("Please enter your UserID:", "");
+      text += userId;
+
+      if (userId != null || userId != "") {
+        unfilled = false;
+      } 
+      
+
+    } while(unfilled == true);
+    unfilled = true;
+
+    do{
+      let password = window.prompt("Please enter your password:", "password");
+      if (password != null || password != "") {
+          unfilled = false;
+        } 
+    }while(unfilled == true);
+     window.alert(text);
+     return userId;
+    }
+</script>
+
+
+ <!--Top Bar Other buttons -->
+
+  <a class="buttonb" href="#"> Contact</a> 
+  <a class="buttonb" href="index.html"> Home</a>
+  <a class="buttonb" href="#" onclick ="window.alert('In development')"> <img src="images/cart.png" width = "24px" height = "24px"></a> 
+
+
+  <!--Search Bar-->
+   <div class="searchbar">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><img src="images/Louge.png" width = "17px" height = "17px"></button>
+    </form>
+  </div>
+  <!-------------------------------------------------->
+
+  <!--Go to Google button-->
+  <div>
+  <a class = "buttonb" href = "https://www.google.com/?client=safari"> <img src= "images/google logo.png" width = "21px" height = "21px" > </a>
+  </div>
+  <!-------------------------------------------------->
+
+
+</div>
+
+
+</div>
+
+<div class = "container" style="height :700px;">
+  <img src="images/ai.jpeg" alt="Code" style="width:100%;  opacity: 0.8;">
+  <div class = "titleInPage">
+    <h1 style="font-family: sans-serif; color: white;">Consult our Live ChatBot</h1> 
+    <h2 style="font-weight: bold; color: white;">I am STAX.AI. What can I help you?</h2>
+    <h3 style="font-size: 20px; color: white"></h3> 
+  </div>
+</div>
+
+
+<div class = "container" style="height :600px;" >
+
+    <div class = "titleInPage" style ="transform:translate(-600px,-350px);">
+    <h3>Ask something to our AI ChatBot STAX.AI</h3>
+   </div>
+
+    <form action="/action_page.php" id="usrform">
+
+    </form>
+    <br>
+
+
+    <input placeholder="Enter your enquiry..."  class= "inputBox" id="userInput1" type = "text" rows="4" cols="60" name="comment"  form="usrform">
+    
+
+    <input type="submit" class = "SubscribeButton"  style = "background-color: rgb(105, 105, 105); transform: translate(0px, 110px);"onclick = "reply()" >
+
+    <script>
+
+        function getRandomInt(min, max) {
+                 return Math.floor(Math.random() *10) % max
+        }
+        function search(text){
+          window.location.href = "www.google.com/search?q=" + text;
+        }
+        var current = Date()
+        function reply(){
+                var input1 = document.getElementById('userInput1').value ;
+                const triggerArray = [
+                //1   Greet 
+                ["hello", "hi", "how are you", "how are u", "how r you", "how r u"],
+                //2   Talk some shits 
+                ["bored","boring"],
+                //3   
+                ["good" ,"gd", "nice", "fine" ],
+                //4   Where
+                ["where are you" , "where are u","where r youu","where r u"],
+                //5   Who
+                ["who are you" , "who are u","who r you","who r u", "what are you", "what are u", "what am I talking to","your name"],
+                //6   Why
+                ["why"],
+                //7  How old
+                ["how old are you" , "how old are u","how old r you","how old r u", "your age"],
+                //8   time 
+                ["what time is it", "wt time is it"],
+                //9  Lunch / fav food / Ask for lunch suggestion
+                ["lunch", "you eat", "should I eat", "dinner"],
+                //10 Sick 
+                ["sick", "not feeling well", "headache"]
+            
+                ] ;
+
+                const replyArray = [
+                //1 
+                ["Hello, how you doing mate", "Hi. Nice to meet you, my friend. How are you?"],
+                //2
+                ["Do you need to find you now? ","Why don't just give me a call now?"],
+                //3
+                ["That's awesome!!!", "Nice to hear that!" ,  "Perfect"],
+                //4
+                ["I am made in Hong Kong and that's where I always be in", "LOOK AT YOUR BACK", "I believe I live in your heart7" ],
+                //5
+                ["I am simply an AI ChatBot developed by STAX." , "I am just an AI designed by STAX for IT Consultation." ,"My name is STAX.AI. Isn't it a nice name?"],
+                //6
+                ["食薯片唔好問點解" , "I don't think that needs a reason", "erm... I think google can help you with that."],
+                //7
+                ["I am born a few days ago. You are the first person I've talked to..... Okay just kidding, I have already met a few ladies and gentleman here.", "I am much younger that you,... lol. I am made a few days ago.^^"],
+                //8
+                ["The current time is " + current],
+                //9
+                ["In my opinion, TAM Jai is the best food in the world.", "Anyway, Tam jai is my fav food.", "Taco is not bad.", "some cereal I guess..", "咩都好, 唔好唔記得飲水^^"],
+                //10
+                ["Water is the best medicine.","Get hydrated would definitely help.", "Please take care! Lets drink some water together."],
+              
+                ] ;
+
+
+                function compare(triggerArray, replyArray, text) {
+                let item;
+                    for (let x = 0; x < triggerArray.length; x++) {
+                        for (let y = 0; y < replyArray.length; y++) {
+                            if (text.toLowerCase().includes(triggerArray[x][y])) {
+                                    items = replyArray[x];
+                                    item = items[getRandomInt(0, items.length)];
+                        }
+                    }
+                    if(text.toLowerCase().includes("search")){
+                      search(text);
+                    }
+                    if (item === undefined){
+                      item = "Can you more specific? I am a beginner to this world."; 
+                    }
+                    
+                }
+                return item;
+               }
+
+document.getElementById('ans').innerHTML = compare(triggerArray, replyArray, input1);
+}
+
+</script>
+
+<div class="box sb1"><p id= "ans"></p></div>
+</div>
+
+
+
+
+
+  <div class = "container" style="height :400px;" >
+    <img src="images/Subscription.jpeg" alt="Code" style="width:100%;  opacity: 0.8;">
+    <div class = "titleInPage">
+      <h2 style="font-family: 'Roboto', sans-serif; color:  white;font-size: 35px; font-weight: bold; text-align: left">Subscribe Us with your email</h2> 
+
+      <input  placeholder="Email Address..." style=" padding: 6px; font-size:13px ;border: none; border-radius: 9px; height: 30px; width:40%;" type="text" id="userInput" />
+
+      <button class ="SubscribeButton"  type="submit" onclick="displayEmail();" >Submit </button>
+       <div id="result" ></div>
+  </div>
+
+ 
+
+<script>
+    function displayEmail() {
+        var input =  document.getElementById("userInput").value;
+         document.getElementById("result").innerHTML = input;
+    }
+</script>
+</div>
+
+
+
+
+
+ 
+
+
+
+
+ <!--Side Bar-->
+<div class="sidenav">
+  <a href ="index.html"><img class = "Icon" src="images/preparation.png" ></a>
+  <a href ="StaxHub.html">STAX Hub</a>
+  <a href="About.html">About</a>
+  <a href="Portal.html">Services Portal</a>
+  <a href="#Contact">Contact</a>
+  <a href="Support.html">Support</a>
+</div> 
+
+
+
+
+  
+
+</body>
+</html>
